@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 24% 5%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 20% 10%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 20% 10%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 195 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 223 22% 15%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 346 83% 60%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 195 100% 30% / 0.3;
+    --input: 214 32% 91%;
+    --ring: 195 100% 50%;
+    
+    --radius: 0.5rem;
+    
+    --neon-blue: 195 100% 50%;
+    --neon-red: 346 83% 60%;
+    --neon-teal: 171 54% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .matrix-overlay {
+    background-image: 
+      linear-gradient(rgba(12, 14, 20, 0.8), rgba(12, 14, 20, 0.8)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100%25' height='100%25' fill='none'/%3E%3Cpath stroke='rgba(0, 200, 255, 0.1)' stroke-width='0.5' d='M10,0 L10,100 M20,0 L20,100 M30,0 L30,100 M40,0 L40,100 M50,0 L50,100 M60,0 L60,100 M70,0 L70,100 M80,0 L80,100 M90,0 L90,100 M0,10 L100,10 M0,20 L100,20 M0,30 L100,30 M0,40 L100,40 M0,50 L100,50 M0,60 L100,60 M0,70 L100,70 M0,80 L100,80 M0,90 L100,90'/%3E%3C/svg%3E");
+  }
+
+  .digital-circuit {
+    background-image: 
+      linear-gradient(90deg, rgba(0, 200, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(rgba(0, 200, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .glow {
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 15px rgba(255, 51, 102, 0.5);
+  }
+
+  .glow-teal {
+    box-shadow: 0 0 15px rgba(57, 196, 178, 0.5);
+  }
+
+  .dashboard {
+    backdrop-filter: blur(5px);
+    background: rgba(26, 31, 42, 0.7);
+    border: 1px solid rgba(0, 200, 255, 0.3);
+  }
+
+  .nav-item {
+    transition: all 0.3s ease;
+  }
+
+  .nav-item:hover {
+    color: rgb(0, 200, 255);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+  }
+
+  .city-outline {
+    position: relative;
+  }
+
+  .city-outline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, rgba(12, 14, 20, 1), rgba(12, 14, 20, 0));
+    pointer-events: none;
+  }
+
+  .neon-text {
+    text-shadow: 0 0 5px rgba(0, 200, 255, 0.7);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0c0e14;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 200, 255, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 200, 255, 0.5);
+  }
+}
