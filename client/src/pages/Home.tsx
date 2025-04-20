@@ -27,13 +27,13 @@ export default function Home() {
           >
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl mb-2 neon-text">Abhijit Dengale</h1>
             <h2 className="font-['Inter'] text-lg md:text-xl text-gray-300 mb-8">
-              AI Agent Developer, Past 4.0 Imgr Portfolio
+              AI Agent Developer, Full Stack & ML Developer
             </h2>
             <h3 className="font-orbitron text-2xl text-[#00c8ff] mb-8">
-              Building AI Powered Solution, CEO at ZyraTech
+              Building AI-Powered Solutions, CEO at ZyraTech
             </h3>
             <p className="font-['Inter'] text-gray-400 max-w-2xl">
-              The space changed as fade or the glass appears that your reality now portrait case a for a spotlight where maywork begins.
+              Specialized in machine learning, AI automation, and advanced algorithms to create scalable and intelligent systems. Leading innovative teams across technology frontiers.
             </p>
           </motion.div>
           
