@@ -1,8 +1,11 @@
 {
-  "buildCommand": "vite build --config vite.config.vercel.js",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": null,
   "outputDirectory": "dist",
-  "framework": "vite",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
