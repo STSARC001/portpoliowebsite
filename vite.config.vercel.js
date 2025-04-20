@@ -19,5 +19,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true
+  },
+  // Use the root index.html as entry point
+  root: './',
+  publicDir: 'public',
+  // Configure the base path for assets
+  base: '/',
+  server: {
+    // Required for Vercel deployment
+    hmr: {
+      protocol: 'ws',
+    }
   }
 });

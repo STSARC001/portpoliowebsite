@@ -7,12 +7,14 @@ echo "Starting custom build process for Vercel deployment..."
 echo "Installing dependencies..."
 npm install
 
-# Build the frontend
-echo "Building the React application with Vite..."
-npx vite build
+# Build the frontend with vercel-specific config
+echo "Building the React application with Vite using Vercel config..."
+npx vite build --config vite.config.vercel.js
 
-# Copy HTML to correct location
-echo "Organizing build output..."
-cp dist/index.html index.html
+# Create output structure that Vercel can understand
+echo "Organizing build output for Vercel..."
+# Ensure static assets are properly organized
+mkdir -p dist/client/src
+cp -r client/src/assets dist/client/src/ 2>/dev/null || true
 
 echo "Build process completed successfully!"
